@@ -24,8 +24,8 @@ app.get('/api', function(req, res){ // listens for request on /api route
 });
 
 app.get('/login', function(req, res){
-  var clientId = process.env.CLIENT_ID;
-  request('https://github.com/login/oauth/authorize?client_id='+clientID+'&scope=repo',
+  var client_id = process.env.CLIENT_ID;
+  request('https://github.com/login/oauth/authorize?client_id=' + client_id + '&scope=repo',
     function (error, response, body) { // api url
       if (!error && response.statusCode === 200) {
         console.log('getting initial code');
