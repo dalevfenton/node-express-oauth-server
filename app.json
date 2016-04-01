@@ -1,7 +1,7 @@
 {
-  "name": "Brewaround",
-  "description": "Brewery Search with Node/Express, Backbone, and BreweryDB",
-  "repository": "https://github.com/graysonhicks/tiy-6.2-loading-button/tree/gh-pages",
+  "name": "Node Express OAuth Pass Through Server",
+  "description": "Github OAuth Pass Through Server",
+  "repository": "https://github.com/dalevfenton/node-express-oauth-server",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
   "keywords": ["node", "express", "static"],
   "image": "heroku/nodejs"

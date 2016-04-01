@@ -15,9 +15,6 @@ app.get('/api', function(req, res){ // listens for request on /api route
             + '&code=' + code,
     function (error, response, body) { // api url
       if (!error && response.statusCode === 200) {
-        console.log('getting auth_token');
-        console.log(response);
-        console.log(body);
         res.send(body); // if no errors, send the body of data back to front end
       }
    });
@@ -28,9 +25,6 @@ app.get('/login', function(req, res){
   request('https://github.com/login/oauth/authorize?client_id=' + client_id + '&scope=repo',
     function (error, response, body) { // api url
       if (!error && response.statusCode === 200) {
-        console.log('getting initial code');
-        console.log(response);
-        console.log(body);
         res.send(body); // if no errors, send the body of data back to front end
       }
    });
