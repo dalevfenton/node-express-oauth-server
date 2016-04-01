@@ -20,14 +20,10 @@ app.get('/api', function(req, res){ // listens for request on /api route
    });
 });
 
-app.get('/login', function(req, res){
+app.get('/client_id', function(req, res){
   var client_id = process.env.CLIENT_ID;
-  request('https://github.com/login/oauth/authorize?client_id=' + client_id + '&scope=repo',
-    function (error, response, body) { // api url
-      if (!error && response.statusCode === 200) {
-        res.send(body); // if no errors, send the body of data back to front end
-      }
-   });
+    res.send(client_id);
+  }
 })
 var port = process.env.PORT || 3000;
 app.listen(port);
