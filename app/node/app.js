@@ -20,11 +20,10 @@ app.get('/api', function(req, res){ // listens for request on /api route
    });
 });
 
-app.get('/client_id', function(req, res){
+app.get('/client-id', function(req, res){
   var client_id = process.env.CLIENT_ID;
-    res.send(client_id);
-  }
-})
+  res.send(client_id);
+});
 var port = process.env.PORT || 3000;
 app.listen(port);
 console.log('Server running on port %d');
