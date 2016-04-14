@@ -37,18 +37,7 @@ app.get('/api/yelp', function(req, res){
     token: token,
     token_secret: token_secret,
   });
-
-  // var term = req.query.term;
-  // var location = req.query.location;
-  // var cll = req.query.cll;
-  // var radius = req.query.radius;
-
-  yelp.search({
-    term: "german food",
-    location: "Hayes",
-    cll: "37.77493,-122.419415",
-    radius_filter: "10"
-  }).then(function(data){
+  yelp.search(req.query).then(function(data){
     res.send(data);
   }).catch(function(err){
     console.error(err);
@@ -57,4 +46,4 @@ app.get('/api/yelp', function(req, res){
 var port = process.env.PORT || 3000;
 app.listen(port);
 
-// console.log('server running on port: ', port);
+console.log('server running on port: ', port);

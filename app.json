@@ -1,6 +1,7 @@
 {
-  "name": "Node Express OAuth Pass Through Server",
-  "description": "Github OAuth Pass Through Server",
+  "name": "Node Express OAuth / API Proxy Server",
+  "description": "This Server Is Configured To Access The Yelp API and
+  MyGasFeed API, but can easily have endpoints added for other services",
   "repository": "https://github.com/dalevfenton/node-express-oauth-server",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
   "keywords": ["node", "express", "static"],
