@@ -8,7 +8,7 @@ app.use(cors()); //allows overriding cross origin policy (use npm install if nee
 
 
 app.get('/api/gasfeed', function(req, res){
-  var key = process.env.GASFEED_API || 'o09ii81rr5';
+  var key = process.env.GASFEED_API;
   var endpoint, options;
   if(req.query.options){
     options = JSON.parse(req.query.options);
@@ -26,10 +26,10 @@ app.get('/api/gasfeed', function(req, res){
 });
 
 app.get('/api/yelp', function(req, res){
-  var ckey = process.env.YELP_CONSUMER_KEY || 'dl6yJ0IjtSbF2i4VcQAyJg';
-  var csecret = process.env.YELP_CONSUMER_SECRET || 'LyKDEwmpIzq7aCbqChMtvDsh3TE';
-  var token = process.env.YELP_TOKEN || 'PwtCgTe9HjOvXnmtnso-pRr8impN_Qxu';
-  var token_secret = process.env.YELP_TOKEN_SECRET || 'tXy1U-oNYvwUcfS--JyLNfo_Rg8';
+  var ckey = process.env.YELP_CONSUMER_KEY;
+  var csecret = process.env.YELP_CONSUMER_SECRET;
+  var token = process.env.YELP_TOKEN;
+  var token_secret = process.env.YELP_TOKEN_SECRET;
 
   var yelp = new Yelp({
     consumer_key: ckey,
