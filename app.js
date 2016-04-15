@@ -7,7 +7,7 @@ var cors = require('cors');
 app.use(cors()); //allows overriding cross origin policy (use npm install if needed)
 
 
-app.get('/api/gasfeed', function(req, res){ // listens for request on /api route
+app.get('/api/gasfeed', function(req, res){
   var key = process.env.GASFEED_API || 'o09ii81rr5';
   var endpoint, options;
   if(req.query.options){
